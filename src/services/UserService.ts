@@ -18,7 +18,7 @@ export const createUser = async (email:string, password:string) => {
   }
 }
 
-export const findByEmail =async (email:string) => {
+export const findByEmail = async (email:string) => {
   return await User.findOne({ where: { email }})
 }
 
@@ -26,6 +26,6 @@ export const matchPassword = (passwordText: string, encrypted: string) => {
   return bcrypt.compareSync(passwordText, encrypted)
 }
 
-export const all =async () => {
+export const all = async () => {
   return await User.findAll()
 }
