@@ -32,10 +32,10 @@ export const login = async (req: Request, res: Response) => {
 
         if(user && UserService.matchPassword(password, user.password)) {
             res.json({ status: true })
+            return
         }
-    } else {
-        res.json({ status: false });
     }
+    res.json({ status: false });
 }
 
 export const list = async (req: Request, res: Response) => {

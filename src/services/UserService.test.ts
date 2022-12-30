@@ -1,6 +1,6 @@
 import * as UserService from '../services/UserService'
 import { User, UserInstance } from '../models/User'
-import exp from 'constants'
+
 
 describe('Testing user service', () => {
   let email = 'test@jest.com'
